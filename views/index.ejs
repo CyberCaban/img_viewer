@@ -7,6 +7,12 @@
     <title>ImgViewer</title>
 </head>
 <body>
+    <% if (locals.fileLink != null) { %>
+        <div>
+            file is uploaded!
+            <a href="<%= locals.fileLink %>"><%= locals.originalname %></a>
+        </div>
+    <% } %>
     <h1>hi</h1>
     <form action="/upload" method="post" enctype="multipart/form-data">
         <input type="file" name="file" id="file">
